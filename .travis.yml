@@ -41,7 +41,7 @@ before_script:
 # 1.2.3) protwords.txt
  - mv example/solr/conf/protwords.txt protwords.bak
  - cp ../apachesolr/solr-conf/solr-3.x/protwords.txt example/solr/conf/protwords.txt
-# 2) Start Apachesolr
+# 2) Start Apachesolr.
  - java -jar start.jar
 # 3) Enable Drupal module.
  - drush en apachesolr --yes
