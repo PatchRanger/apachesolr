@@ -32,17 +32,25 @@ before_script:
  - tar -xvzf apache-solr-3.6.2.tgz
 # 1.2) Replace configuration files.
  - cd apache-solr-3.6.2
+# @todo Remove it.
 # 1.2.1) schema.xml
- - mv example/solr/conf/schema.xml schema.bak
- - cp ../apachesolr/solr-conf/solr-3.x/schema.xml example/solr/conf/schema.xml
+# - mv example/solr/conf/schema.xml schema.bak
+# - cp ../apachesolr/solr-conf/solr-3.x/schema.xml example/solr/conf/schema.xml
 # 1.2.2) solrconfig.xml
- - mv example/solr/conf/solrconfig.xml solrconfig.bak
- - cp ../apachesolr/solr-conf/solr-3.x/solrconfig.xml example/solr/conf/solrconfig.xml
+# - mv example/solr/conf/solrconfig.xml solrconfig.bak
+# - cp ../apachesolr/solr-conf/solr-3.x/solrconfig.xml example/solr/conf/solrconfig.xml
 # 1.2.3) protwords.txt
- - mv example/solr/conf/protwords.txt protwords.bak
- - cp ../apachesolr/solr-conf/solr-3.x/protwords.txt example/solr/conf/protwords.txt
+# - mv example/solr/conf/protwords.txt protwords.bak
+# - cp ../apachesolr/solr-conf/solr-3.x/protwords.txt example/solr/conf/protwords.txt
 # 1.2.4) solrcore.properties
- - cp ../apachesolr/solr-conf/solr-3.x/solrcore.properties example/solr/conf/solrcore.properties
+# - cp ../apachesolr/solr-conf/solr-3.x/solrcore.properties example/solr/conf/solrcore.properties
+#
+# 1.2.1) Backup configuration files.
+ - mv example/solr/conf/schema.xml schema.bak
+ - mv example/solr/conf/solrconfig.xml solrconfig.bak
+ - mv example/solr/conf/protwords.txt protwords.bak
+# 1.2.2) Copy necessary configuration files.
+ - cp ./apachesolr/solr-conf/solr-3.x/* example/solr/conf
 # 2) Start Apachesolr.
  - cd example
  - java -jar start.jar
