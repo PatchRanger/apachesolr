@@ -42,7 +42,6 @@ before_script:
  - mv example/solr/conf/protwords.txt protwords.bak
  - cp ../apachesolr/solr-conf/solr-3.x/protwords.txt example/solr/conf/protwords.txt
 # 1.2.4) solrcore.properties
- - mv example/solr/conf/solrcore.properties solrcore.bak
  - cp ../apachesolr/solr-conf/solr-3.x/solrcore.properties example/solr/conf/solrcore.properties
 # 2) Start Apachesolr.
  - cd example
