@@ -29,7 +29,7 @@ before_script:
  - cd ..
 # 1.1) Download & extract the latest Apachesolr.
  - wget http://apache.mesi.com.ar/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
- - tar -xvzf apache-solr-3.6.2.tgz
+ - tar -xzf apache-solr-3.6.2.tgz
 # 1.2) Replace configuration files.
  - cd apache-solr-3.6.2
 # @todo Remove it.
