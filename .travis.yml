@@ -31,7 +31,7 @@ before_script:
  - wget http://apache.mesi.com.ar/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
  - tar -xzf apache-solr-3.6.2.tgz
 # 1.2) Replace configuration files.
- - cd apache-solr-3.6.2
+ - cd apache-solr-*
 # @todo Remove it.
 # 1.2.1) schema.xml
 # - mv example/solr/conf/schema.xml schema.bak
@@ -56,7 +56,9 @@ before_script:
 # & means running in background.
  - java -jar start.jar &
  - sleep 6
-# 3) Enable Drupal module.
+# 3) Return to Drupal directory.
+ - cd ../../drupal-*
+# 4) Enable Drupal module.
  - drush en apachesolr --yes
  - drush cc all
 # & means running in background.
