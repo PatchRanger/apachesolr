@@ -28,7 +28,7 @@ before_script:
 # @todo Do not hardcode current version, use the latest.
  - cd ..
 # 1.1) Download & extract the latest Apachesolr.
- - wget http://apache-mirror.rbc.ru/pub/apache/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
+ - wget http://apache.mesi.com.ar/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
  - tar -xvzf apache-solr-3.6.2.tgz
 # 1.2) Replace configuration files.
  - cd apache-solr-3.6.2
