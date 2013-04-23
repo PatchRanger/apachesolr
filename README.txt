@@ -67,17 +67,13 @@ and you will be missing important new features.
 
 For example, when deploying solr 1.4:
 
-Move apache-solr-1.4.1/example/solr/conf/schema.xml and rename it to
-something like schema.bak. Then move the solr-conf/solr-1.4/schema.xml
-that comes with this Drupal module to take its place.
+Backup following configuration files from apache-solr-1.4.1/example/solr/conf/
+by renaming to <filename>.bak: protwords.txt, schema.xml, solrcore.properties,
+solrconfig.xml - so you should end up with protwords.bak, schema.bak,
+solrcore.bak, solrconfig.bak.
 
-Similarly, move apache-solr-1.4.1/example/solr/conf/solrconfig.xml and rename
-it like solrconfig.bak. Then move the solr-conf/solr-1.4/solrconfig.xml
-that comes with this module to take its place.
-
-Finally, move apache-solr-1.4.1/example/solr/conf/protwords.txt and rename it
-protwords.bak. Then move the solr-conf/solr-1.4/protwords.txt that comes
-with this module to take its place.
+Copy full content of solr-conf/solr-1.4/ directory to
+apache-solr-1.4.1/example/solr/conf/.
 
 Make sure that the conf directory includes the following files - the Solr core
 may not load if you don't have at least an empty file present:
