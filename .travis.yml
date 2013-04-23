@@ -55,9 +55,11 @@ before_script:
  - cd example
 # & means running in background.
  - java -jar start.jar &
+ - sleep 6
 # 3) Enable Drupal module.
  - drush en apachesolr --yes
  - drush cc all
+# & means running in background.
  - drush runserver --server=builtin 8080 &
  - sleep 4
  - drush vset simpletest_verbose TRUE --yes
