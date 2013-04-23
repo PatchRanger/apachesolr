@@ -53,7 +53,8 @@ before_script:
  - cp ../apachesolr/solr-conf/solr-3.x/* example/solr/conf
 # 2) Start Apachesolr.
  - cd example
- - java -jar start.jar
+# & means running in background.
+ - java -jar start.jar &
 # 3) Enable Drupal module.
  - drush en apachesolr --yes
  - drush cc all
