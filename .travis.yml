@@ -41,7 +41,8 @@ before_script:
 # 2) Start Apachesolr.
  - cd example
 # & means running in background.
- - java -jar start.jar &
+# Let's check if starting Solr server is really necessary for testing.
+# - java -jar start.jar &
  - sleep 6
 # 3) Return to Drupal directory.
  - cd ../../drupal-*
